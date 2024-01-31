@@ -8,12 +8,15 @@ body{
 }
 .Navbar{
     padding:10px;
-    margin:10px;
+   z-index: 1;
     display: flex;
     justify-content: space-between;
     border-bottom: solid black 1px;
     gap:5px;
     align-items: center;
+    position:sticky;
+    background-color: white;
+    top:0;
 }
 .Navbar__left__title{
     color:#8710D8;
@@ -33,7 +36,25 @@ body{
 .Navbar__input{
     border:none;
     font-size: 16px;
+    background-color: transparent;
 
+}
+.Learning{
+    position:relative;
+    cursor: pointer;
+}
+.Learning__popup{
+    position: absolute;
+    border:solid black 2px;
+    width:100px;
+    height:50px;
+    padding:5px;
+    z-index: 2;
+    display: none;
+    background-color: white;
+}
+.Learning:hover .Learning__popup{
+    display: block;
 }
 .Navbar__Right{
     display:flex;
@@ -52,9 +73,49 @@ body{
     color: white;
     border-radius: 15px;
     padding: 10px;
+    cursor: pointer;
+    border:solid #8710D8 2px ;
+}
+.Categories p:hover{
+    transition:1s;
+    background-color: transparent;
+    color: #8710D8;
+    border:solid #8710D8 2px ;
+    
+
+}
+.sale__image{
+    position:relative;
+  
 }
 .sale__image img{
   width:100%;
+ 
+}
+.sale__image__offer{
+    animation-name:zoom;
+    position:absolute;
+    top:80px;
+    left:50px;
+    background-color: white;
+    width:fit-content;
+    height: 100px;
+    color: black;
+    border:solid black 5px;
+    padding:20px;
+    animation-duration: 3s;
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1);
+    }
 }
 .Recommended{
     padding: 10px;
@@ -111,4 +172,20 @@ padding: 10px;
 }
 .Footer__two{
     margin: 20px;
+}
+
+@media screen and (max-width:800px){
+    body{
+        font-size:10px;
+    }
+
+}
+@media screen and (max-width:500px){
+    
+    .course{
+        flex-basis:40%;
+    }
+    .Categories{
+        display:none;
+    }
 }

@@ -1,0 +1,53 @@
+.Container{
+    width:1000px;
+    height:1000px;
+    background-color: pink;
+    border:solid blue ;
+   
+    
+   
+}
+.Header hr {
+    width: 50%;
+    color:blue;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.Header h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+
+
+.center__card__one {
+    width:20%;
+    gap:20px;
+    padding:40px;
+    display:flex; 
+    justify-content: space-between;
+}
+
+.center__card__one img{
+border:solid black 5px;
+    width:100%; 
+}
+
+.center__card__two {
+    width:20%;
+    gap:20px;
+    padding:40px;
+    display:flex; 
+    justify-content: space-between;
+}
+
+.center__card__two img{
+border:solid black 5px;
+    width:100%; 
+}
+/* .center__card__two img{
+    border:solid black 5px;
+        width:100%; 
+   
+} */
